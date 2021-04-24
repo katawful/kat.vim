@@ -4,6 +4,6 @@ if exists("syntax_on")
 endif
 
 set background=dark
-set g:colors_name="kat"
+set g:colors_name='kat'
 
 
