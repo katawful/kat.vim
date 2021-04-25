@@ -3,6 +3,8 @@ if exists("syntax_on")
   syntax reset
 endif
 
+set termguicolors
+
 let g:colors_name='kat'
 
 " color scheme type
@@ -23,7 +25,7 @@ endif
 let s:kat = {}
 
 " fill with dark colors {{{
-if g:kat_theme ==? 'dark
+if g:kat_theme ==? 'dark'
   let s:kat.fg = '#daf6ff'
   let s:kat.fg1 = '#b5d5df'
   let s:kat.fg2 = '#8dbcca'
@@ -86,6 +88,38 @@ if g:kat_theme ==? 'light'
 endif
 " }}}
 
+" }}}
+
+" highlight function {{{
+function! s:KatHiFun(group, ...)
+  " arguments: group, bg, fg, gui, guisp
+  let histring = 'hi ' . a:group . ' '
+
+  if strlen(a:1)
+    let histring .= 'guibg=' . a:1 . ' '
+  endif
+ 
+  if strlen(a:2)
+    let histring .= 'guifg=' . a:2 . ' '
+  endif
+
+  if strlen(a:3)
+    let histring .= 'gui=' . a:3 . ' '
+  endif
+
+  if strlen(a:4)
+    let histring .= 'guisp=' . a:4 . ' '
+  endif
+
+  execute histring
+endfunction
+" }}}
+
+" Vim groups {{{
+call s:KatHiFun('Normal', s:kat.bg, s:kat.fg, 'NONE', 'NONE')
+call s:KatHiFun('NonText', s:kat.bg, s:kat.fg, 'NONE', 'NONE')
+call s:KatHiFun('Comment', s:kat.bg, s:kat.blue_contrast, 'italic', 'NONE')
+call s:KatHiFun('Cursor', s:kat.fg1, s:kat.fg1, 'NONE', 'NONE')
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
