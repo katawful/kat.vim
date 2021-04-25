@@ -21,71 +21,94 @@ else
   echoerr "'g:kat_theme' is invalid, defaulting to 'dark'"
 endif
 
+" swap and source function
+" nnoremap <buffer> <leader>s :call SwapNSource()<CR>:source %<CR>
+" map for it
+function! SwapNSource()
+  if g:kat_theme ==? 'light'
+    let g:kat_theme = 'dark'
+  elseif g:kat_theme ==? 'dark'
+    let g:kat_theme = 'light'
+  endif
+endfunction
+
 " define color dictionary {{{
 let s:kat = {}
 
 " fill with dark colors {{{
 if g:kat_theme ==? 'dark'
-  let s:kat.fg = '#daf6ff'
-  let s:kat.fg1 = '#b5d5df'
-  let s:kat.fg2 = '#8dbcca'
-  let s:kat.fg3 = '#699faf'
-  let s:kat.fg4 = '#4f7e8c'
-  let s:kat.fg5 = '#325049'
+  let s:kat.fg = ['#daf6ff',
+        \'#b5d5df',
+        \'#8dbcca',
+        \'#699faf',
+        \'#4f7e8c',
+        \'#325049'
+        \]
 
-  let s:kat.bg = '#121c2d'
-  let s:kat.bg1 = '#1c2e4a'
-  let s:kat.bg2 = '#2c466e'
-  let s:kat.bg3 = '#46689c'
-  let s:kat.bg4 = '#6690d0'
-  let s:kat.bg5 = '#78adff'
+  let s:kat.bg = ['#121c2d',
+        \'#1c2e4a',
+        \'#2c466e',
+        \'#46689c',
+        \'#6690d0',
+        \'#78adff',
+        \]
 
-  let s:kat.red_norm = '#eb4949'
-  let s:kat.green_norm = '#8ceba9'
-  let s:kat.orange_norm = '#f2b15c'
-  let s:kat.pink_norm = '#f29cb1'
-  let s:kat.purple_norm = '#c8a5f1'
-  let s:kat.blue_norm = '#7bb7c9'
-
-  let s:kat.red_contrast = '#ff5a5a'
-  let s:kat.green_contrast = '#9dffd2'
-  let s:kat.orange_contrast = 'ffe861'
-  let s:kat.pink_contrast = '#ffaed5'
-  let s:kat.purple_contrast = '#f9b5ff'
-  let s:kat.blue_contrast = '#8af9ff'
+  " order: normal, contrast, dull
+  let s:kat.red = ['#eb4949', '#ff5a5a', '#9c3636']
+  let s:kat.green = ['#8ceba9', '#9dffd2', '#60b77a']
+  let s:kat.orange = ['#f2b15c', '#ffe861', '#ce8b33']
+  let s:kat.pink = ['#f29cb1', '#ffaed5', '#a73953']
+  let s:kat.purple = ['#c8a5f1', '#f9b5ff', '#7a53a8']
+  let s:kat.blue = ['#7bb7c9', '#8af9ff', '#388ba4']
 endif
 " }}}
 
 " fill with light colors {{{
 if g:kat_theme ==? 'light'
-  let s:kat.fg = '#121c2d'
-  let s:kat.fg1 = '#1c2e4a'
-  let s:kat.fg2 = '#2c466e'
-  let s:kat.fg3 = '#46689c'
-  let s:kat.fg4 = '#6690d0'
-  let s:kat.fg5 = '#78adff'
+  let s:kat.fg = ['#121c2d',
+        \'#1c2e4a',
+        \'#2c466e',
+        \'#46689c',
+        \'#6690d0',
+        \'#78adff',
+        \]
 
-  let s:kat.bg = '#daf6ff'
-  let s:kat.bg1 = '#b5d5df'
-  let s:kat.bg2 = '#8dbcca'
-  let s:kat.bg3 = '#699faf'
-  let s:kat.bg4 = '#4f7e8c'
-  let s:kat.bg5 = '#325049'
+  let s:kat.bg = ['#daf6ff',
+        \'#b5d5df',
+        \'#8dbcca',
+        \'#699faf',
+        \'#4f7e8c',
+        \'#325049'
+        \]
 
-  let s:kat.red_norm = '#eb4949'
-  let s:kat.green_norm = '#8ceba9'
-  let s:kat.orange_norm = '#f2b15c'
-  let s:kat.pink_norm = '#f29cb1'
-  let s:kat.purple_norm = '#c8a5f1'
-  let s:kat.blue_norm = '#7bb7c9'
-
-  let s:kat.red_contrast = '#ff5a5a'
-  let s:kat.green_contrast = '#9dffd2'
-  let s:kat.orange_contrast = 'ffe861'
-  let s:kat.pink_contrast = '#ffaed5'
-  let s:kat.purple_contrast = '#f9b5ff'
-  let s:kat.blue_contrast = '#8af9ff'
+  " order: normal, contrast, dull
+  let s:kat.red = ['#eb4949', '#9c3636', '#ff5a5a']
+  let s:kat.green = ['#8ceba9', '#60b77a', '#9dffd2']
+  let s:kat.orange = ['#f2b15c', '#ce8b33', '#ffe861']
+  let s:kat.pink = ['#f29cb1', '#a73953', '#ffaed5']
+  let s:kat.purple = ['#c8a5f1', '#7a53a8', '#f9b5ff']
+  let s:kat.blue = ['#7bb7c9', '#388ba4', '#8af9ff']
 endif
+" }}}
+
+" 16 color version {{{
+let s:kat.16 = {}
+let s:kat.16[0] = s:kat.bg[0]
+let s:kat.16[1] = s:kat.red[0]
+let s:kat.16[2] = s:kat.green[0]
+let s:kat.16[3] = s:kat.orange[0]
+let s:kat.16[4] = s:kat.pink[0]
+let s:kat.16[5] = s:kat.purple[0]
+let s:kat.16[6] = s:kat.blue[0]
+let s:kat.16[7] = s:kat.fg[0]
+let s:kat.16[8] = s:kat.bg[1]
+let s:kat.16[9] = s:kat.red[1]
+let s:kat.16[10] = s:kat.green[1]
+let s:kat.16[11] = s:kat.orange[1]
+let s:kat.16[12] = s:kat.pink[1]
+let s:kat.16[13] = s:kat.purple[1]
+let s:kat.16[14] = s:kat.blue[1]
+let s:kat.16[15] = s:kat.fg[1]
 " }}}
 
 " }}}
@@ -116,10 +139,36 @@ endfunction
 " }}}
 
 " Vim groups {{{
-call s:KatHiFun('Normal', s:kat.bg, s:kat.fg, 'NONE', 'NONE')
-call s:KatHiFun('NonText', s:kat.bg, s:kat.fg, 'NONE', 'NONE')
-call s:KatHiFun('Comment', s:kat.bg, s:kat.blue_contrast, 'italic', 'NONE')
-call s:KatHiFun('Cursor', s:kat.fg1, s:kat.fg1, 'NONE', 'NONE')
+call s:KatHiFun('Normal', s:kat.bg[0], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('NormalNC', s:kat.bg[0], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('NormalFLoat', s:kat.bg[0], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('NonText', s:kat.bg[0], s:kat.fg[3], 'NONE', 'NONE')
+call s:KatHiFun('MatchPattern', s:kat.red[1], s:kat.fg[0], 'NONE', 'NONE')
+
+" TODO italics option
+call s:KatHiFun('Comment', s:kat.bg[0], s:kat.blue[1], 'italic', 'NONE')
+
+call s:KatHiFun('Cursor', s:kat.fg[0], s:kat.bg[0], 'NONE', 'NONE')
+call s:KatHiFun('CursorColumn', s:kat.bg[2], 'NONE', 'NONE', 'NONE')
+call s:KatHiFun('CursorLine', s:kat.bg[2], 'NONE', 'NONE', 'NONE')
+
+call s:KatHiFun('ErrorMsg', s:kat.red[0], s:kat.fg[0], 'NONE', 'NONE')
+
+call s:KatHiFun('VertSplit', s:kat.bg[1], s:kat.fg[3], 'NONE', 'NONE')
+call s:KatHiFun('Folded', 'NONE', s:kat.fg[2], 'bold', 'NONE')
+call s:KatHiFun('FoldColumn', 'NONE', s:kat.purple[1], 'bold', 'NONE')
+call s:KatHiFun('SignColumn', 'NONE', 'NONE', 'bold', 'NONE')
+call s:KatHiFun('IncSearch', s:kat.orange[0], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('Substitute', s:kat.orange[1], s:kat.bg[0], 'NONE', 'NONE')
+call s:KatHiFun('LineNr', 'NONE', s:kat.pink[0], 'NONE', 'NONE')
+" TODO add underline option?
+call s:KatHiFun('CursorLineNr', 'NONE', s:kat.pink[1], 'bold', 'NONE')
+
+call s:KatHiFun('ModeMsg', s:kat.bg[2], s:kat.fg[0], 'bold', 'NONE')
+call s:KatHiFun('MsgArea', s:kat.bg[1], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('MsgSeparator', s:kat.bg[1], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('MoreMsg', 'NONE', s:kat.purple[1], 'NONE', 'NONE')
+
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
