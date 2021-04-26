@@ -211,7 +211,51 @@ endif
 
 " Vim syntax groups {{{
 " TODO italics option
-call s:KatHiFun('Comment', s:kat.bg[0], s:kat.blue[1], 'italic', 'NONE')
+call s:KatHiFun('Comment', 'NONE', s:kat.blue[1], 'italic', 'NONE')
+
+call s:KatHiFun('Constant', 'NONE', s:kat.pink[1], 'NONE', 'NONE')
+call s:KatHiFun('String', 'NONE', s:kat.orange[0], 'NONE', 'NONE')
+call s:KatHiFun('Character', 'NONE', s:kat.green[1], 'bold', 'NONE')
+call s:KatHiFun('Number', 'NONE', s:kat.purple[0], 'NONE', 'NONE')
+call s:KatHiFun('Float', 'NONE', s:kat.purple[1], 'NONE', 'NONE')
+call s:KatHiFun('Boolean', 'NONE', s:kat.blue[1], 'bold', 'NONE')
+
+call s:KatHiFun('Identifier', 'NONE', s:kat.red[0], 'NONE', 'NONE')
+call s:KatHiFun('Function', 'NONE', s:kat.red[0], 'bold', 'NONE')
+
+call s:KatHiFun('Statement', 'NONE', s:kat.orange[0], 'NONE', 'NONE')
+call s:KatHiFun('Conditional', 'NONE', s:kat.orange[1], 'bold', 'NONE')
+call s:KatHiFun('Repeat', 'NONE', s:kat.orange[1], 'NONE', 'NONE')
+call s:KatHiFun('Label', 'NONE', s:kat.red[2], 'bold', 'NONE')
+call s:KatHiFun('Operator', 'NONE', s:kat.blue[0], 'bold', 'NONE')
+call s:KatHiFun('Keyword', 'NONE', s:kat.purple[2], 'bold', 'NONE')
+call s:KatHiFun('Exception', 'NONE', s:kat.red[1], 'NONE', 'NONE')
+
+call s:KatHiFun('PreProc', 'NONE', s:kat.pink[0], 'bold,italic', 'NONE')
+call s:KatHiFun('Include', 'NONE', s:kat.orange[0], 'bold,italic', 'NONE')
+call s:KatHiFun('Define', 'NONE', s:kat.purple[0], 'bold,italic', 'NONE')
+call s:KatHiFun('Macro', 'NONE', s:kat.pink[1], 'bold,italic', 'NONE')
+call s:KatHiFun('PreCondit', 'NONE', s:kat.red[1], 'bold,italic', 'NONE')
+
+call s:KatHiFun('Type', 'NONE', s:kat.orange[0], 'bold', 'NONE')
+call s:KatHiFun('StorageClass', 'NONE', s:kat.blue[0], 'bold', 'NONE')
+call s:KatHiFun('Structure', 'NONE', s:kat.blue[1], 'bold', 'NONE')
+call s:KatHiFun('Typedef', 'NONE', s:kat.fg[5], 'bold', 'NONE')
+
+call s:KatHiFun('Special', 'NONE', s:kat.red[0], 'NONE', 'NONE')
+call s:KatHiFun('SpecialChar', 'NONE', s:kat.red[0], 'bold', 'NONE')
+call s:KatHiFun('Tag', 'NONE', s:kat.green[1], 'bold', 'NONE')
+call s:KatHiFun('Delimiter', 'NONE', s:kat.bg[3], 'bold', 'NONE')
+call s:KatHiFun('SpecialComment', 'NONE', s:kat.bg[5], 'bold,italic', 'NONE')
+call s:KatHiFun('Debug', 'NONE', s:kat.red[0], 'bold,underline', 'NONE')
+
+call s:KatHiFun('Underlined', 'NONE', s:kat.bg[5], 'underline', 'NONE')
+
+call s:KatHiFun('Error', s:kat.red[0], s:kat.fg[1], 'bold', 'NONE')
+
+call s:KatHiFun('Todo', s:kat.purple[0], s:kat.bg[0], 'NONE', 'NONE')
+
+call s:KatHiFun('Ignore', 'NONE', s:kat.fg[5], 'NONE', 'NONE')
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
