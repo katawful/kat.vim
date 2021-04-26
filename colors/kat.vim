@@ -144,22 +144,53 @@ call s:KatHiFun('NormalNC', s:kat.bg[0], s:kat.fg[0], 'NONE', 'NONE')
 call s:KatHiFun('NormalFLoat', s:kat.bg[0], s:kat.fg[0], 'NONE', 'NONE')
 call s:KatHiFun('NonText', s:kat.bg[0], s:kat.fg[3], 'NONE', 'NONE')
 call s:KatHiFun('MatchPattern', s:kat.red[1], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('SpecialKey', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
+call s:KatHiFun('Whitespace', 'NONE', s:kat.fg[5], 'NONE', 'NONE')
 
-" TODO italics option
-call s:KatHiFun('Comment', s:kat.bg[0], s:kat.blue[1], 'italic', 'NONE')
+" TODO some terminals don't support undercurl properly, this needs to be adjusted
+call s:KatHiFun('SpellBad', 'NONE', 'NONE', 'undercurl', s:kat.red[0])
+call s:KatHiFun('SpellCap', 'NONE', 'NONE', 'undercurl', s:kat.blue[0])
+call s:KatHiFun('SpellLocal', 'NONE', 'NONE', 'undercurl', s:kat.green[0])
+call s:KatHiFun('SpellRare', 'NONE', 'NONE', 'undercurl', s:kat.pink[0])
+
+call s:KatHiFun('StatusLine', s:kat.purple[1], s:kat.bg[0], 'NONE', 'NONE')
+call s:KatHiFun('StatusLineNC', s:kat.purple[2], s:kat.bg[0], 'NONE', 'NONE')
+
+call s:KatHiFun('TabLine', s:kat.purple[0], s:kat.bg[0], 'NONE', 'NONE')
+call s:KatHiFun('TabLineFill', s:kat.purple[2], s:kat.bg[0], 'NONE', 'NONE')
+call s:KatHiFun('TabLineSel', s:kat.blue[1], s:kat.bg[0], 'bold', 'NONE')
+
+call s:KatHiFun('Title', 'NONE', s:kat.green[1], 'NONE', 'NONE')
+
+call s:KatHiFun('Visual', s:kat.bg[4], 'NONE', 'NONE', 'NONE')
+call s:KatHiFun('Visual', s:kat.red[1], 'NONE', 'NONE', 'NONE')
+
+call s:KatHiFun('Pmenu', s:kat.pink[2], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('PmenuSel', s:kat.pink[1], s:kat.bg[0], 'NONE', 'NONE')
+call s:KatHiFun('PmenuSbar', s:kat.fg[1], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('PmenuThumb', s:kat.bg[3], s:kat.bg[0], 'NONE', 'NONE')
+call s:KatHiFun('WildMenu', s:kat.pink[1], s:kat.bg[0], 'NONE', 'NONE')
+
+call s:KatHiFun('Question', 'NONE', s:kat.green[1], 'bold,underline', 'NONE')
+call s:KatHiFun('QuickFixLine', s:kat.bg[1], 'NONE', 'NONE', 'NONE')
 
 call s:KatHiFun('Cursor', s:kat.fg[0], s:kat.bg[0], 'NONE', 'NONE')
 call s:KatHiFun('CursorColumn', s:kat.bg[2], 'NONE', 'NONE', 'NONE')
 call s:KatHiFun('CursorLine', s:kat.bg[2], 'NONE', 'NONE', 'NONE')
+call s:KatHiFun('ColorColumn', s:kat.bg[3], 'NONE', 'bold', 'NONE')
 
 call s:KatHiFun('ErrorMsg', s:kat.red[0], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('WarningMsg', s:kat.bg[0], s:kat.red[0], 'bold', 'NONE')
 
 call s:KatHiFun('VertSplit', s:kat.bg[1], s:kat.fg[3], 'NONE', 'NONE')
 call s:KatHiFun('Folded', 'NONE', s:kat.fg[2], 'bold', 'NONE')
 call s:KatHiFun('FoldColumn', 'NONE', s:kat.purple[1], 'bold', 'NONE')
 call s:KatHiFun('SignColumn', 'NONE', 'NONE', 'bold', 'NONE')
-call s:KatHiFun('IncSearch', s:kat.orange[0], s:kat.fg[0], 'NONE', 'NONE')
+
+call s:KatHiFun('IncSearch', s:kat.orange[1], s:kat.bg[0], 'NONE', 'NONE')
 call s:KatHiFun('Substitute', s:kat.orange[1], s:kat.bg[0], 'NONE', 'NONE')
+call s:KatHiFun('Search', s:kat.orange[0], s:kat.bg[0], 'NONE', 'NONE')
+
 call s:KatHiFun('LineNr', 'NONE', s:kat.pink[0], 'NONE', 'NONE')
 " TODO add underline option?
 call s:KatHiFun('CursorLineNr', 'NONE', s:kat.pink[1], 'bold', 'NONE')
@@ -169,6 +200,18 @@ call s:KatHiFun('MsgArea', s:kat.bg[1], s:kat.fg[0], 'NONE', 'NONE')
 call s:KatHiFun('MsgSeparator', s:kat.bg[1], s:kat.fg[0], 'NONE', 'NONE')
 call s:KatHiFun('MoreMsg', 'NONE', s:kat.purple[1], 'NONE', 'NONE')
 
+" gui specific stuff
+if has("gui")
+  call s:KatHiFun('Menu', s:kat.bg[0], s:kat.fg[0], 'NONE', 'NONE')
+  call s:KatHiFun('Scrollbar', s:kat.pink[0], s:kat.fg[0], 'NONE', 'NONE')
+  call s:KatHiFun('Scrollbar', s:kat.bg[1], s:kat.fg[0], 'NONE', 'NONE')
+endif
+
+" }}}
+
+" Vim syntax groups {{{
+" TODO italics option
+call s:KatHiFun('Comment', s:kat.bg[0], s:kat.blue[1], 'italic', 'NONE')
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
