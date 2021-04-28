@@ -220,10 +220,10 @@ call s:KatHiFun('Number', 'NONE', s:kat.purple[0], 'NONE', 'NONE')
 call s:KatHiFun('Float', 'NONE', s:kat.purple[1], 'NONE', 'NONE')
 call s:KatHiFun('Boolean', 'NONE', s:kat.blue[1], 'bold', 'NONE')
 
-call s:KatHiFun('Identifier', 'NONE', s:kat.purple[1], 'NONE', 'NONE')
-call s:KatHiFun('Function', 'NONE', s:kat.red[2], 'bold', 'NONE')
+call s:KatHiFun('Identifier', 'NONE', s:kat.red[0], 'italic', 'NONE')
+call s:KatHiFun('Function', 'NONE', s:kat.orange[0], 'bold', 'NONE')
 
-call s:KatHiFun('Statement', 'NONE', s:kat.orange[2], 'bold', 'NONE')
+call s:KatHiFun('Statement', 'NONE', s:kat.red[2], 'bold', 'NONE')
 call s:KatHiFun('Conditional', 'NONE', s:kat.purple[0], 'NONE', 'NONE')
 call s:KatHiFun('Repeat', 'NONE', s:kat.bg[5], 'NONE', 'NONE')
 call s:KatHiFun('Label', 'NONE', s:kat.purple[1], 'bold', 'NONE')
