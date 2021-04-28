@@ -6,11 +6,10 @@ endif
 set termguicolors
 
 let g:colors_name='kat'
-colorscheme kat
 
 " color scheme type
 if !exists('g:kat_theme')
-  let g:kat_theme = 'light'
+  let g:kat_theme = 'dark'
 endif
 
 " set general shade option
