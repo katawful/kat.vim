@@ -211,7 +211,7 @@ endif
 
 " Vim syntax groups {{{
 " TODO italics option
-call s:KatHiFun('Comment', 'NONE', s:kat.blue[1], 'italic', 'NONE')
+call s:KatHiFun('Comment', 'NONE', s:kat.purple[1], 'italic', 'NONE')
 
 call s:KatHiFun('Constant', 'NONE', s:kat.pink[1], 'NONE', 'NONE')
 call s:KatHiFun('String', 'NONE', s:kat.green[0], 'NONE', 'NONE')
@@ -223,13 +223,13 @@ call s:KatHiFun('Boolean', 'NONE', s:kat.blue[1], 'bold', 'NONE')
 call s:KatHiFun('Identifier', 'NONE', s:kat.purple[1], 'NONE', 'NONE')
 call s:KatHiFun('Function', 'NONE', s:kat.red[2], 'bold', 'NONE')
 
-call s:KatHiFun('Statement', 'NONE', s:kat.orange[2], 'NONE', 'NONE')
-call s:KatHiFun('Conditional', 'NONE', s:kat.purple[0], 'bold', 'NONE')
-call s:KatHiFun('Repeat', 'NONE', s:kat.bg[4], 'NONE', 'NONE')
+call s:KatHiFun('Statement', 'NONE', s:kat.orange[2], 'bold', 'NONE')
+call s:KatHiFun('Conditional', 'NONE', s:kat.purple[0], 'NONE', 'NONE')
+call s:KatHiFun('Repeat', 'NONE', s:kat.bg[5], 'NONE', 'NONE')
 call s:KatHiFun('Label', 'NONE', s:kat.purple[1], 'bold', 'NONE')
 call s:KatHiFun('Operator', 'NONE', s:kat.blue[0], 'bold', 'NONE')
-call s:KatHiFun('Keyword', 'NONE', s:kat.green[0], 'bold', 'NONE')
-call s:KatHiFun('Exception', 'NONE', s:kat.bg[5], 'NONE', 'NONE')
+call s:KatHiFun('Keyword', 'NONE', s:kat.green[0], 'bold,italic', 'NONE')
+call s:KatHiFun('Exception', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
 
 call s:KatHiFun('PreProc', 'NONE', s:kat.pink[0], 'bold,italic', 'NONE')
 call s:KatHiFun('Include', 'NONE', s:kat.pink[2], 'bold,italic', 'NONE')
