@@ -263,4 +263,10 @@ call s:KatHiFun('DiffChange', s:kat.purple[1], s:kat.bg[0], 'bold', 'NONE')
 call s:KatHiFun('DiffText', s:kat.blue[0], s:kat.bg[0], 'bold', 'NONE')
 " }}}
 
+" indentLine {{{
+if !exists('g:indentLine_color_gui')
+  let g:indentLine_color_gui = s:kat.bg[4]
+endif
+" }}}
+
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
