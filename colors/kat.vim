@@ -211,7 +211,7 @@ endif
 
 " Vim syntax groups {{{
 " TODO italics option
-call s:KatHiFun('Comment', 'NONE', s:kat.green[1], 'italic', 'NONE')
+call s:KatHiFun('Comment', 'NONE', s:kat.blue[0], 'italic', 'NONE')
 
 call s:KatHiFun('Constant', 'NONE', s:kat.pink[1], 'NONE', 'NONE')
 call s:KatHiFun('String', 'NONE', s:kat.green[0], 'NONE', 'NONE')
