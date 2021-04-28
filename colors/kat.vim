@@ -6,10 +6,11 @@ endif
 set termguicolors
 
 let g:colors_name='kat'
+colorscheme kat
 
 " color scheme type
 if !exists('g:kat_theme')
-  let g:kat_theme = 'dark'
+  let g:kat_theme = 'light'
 endif
 
 " set general shade option
@@ -269,4 +270,20 @@ if !exists('g:indentLine_color_gui')
 endif
 " }}}
 
+" Filetype {{{
+
+" Vim: {{{
+call s:KatHiFun('vimCommentTitle', s:kat.fg[4], 'NONE', 'bold,italic', 'NONE')
+call s:KatHiFun('vimNotation', 'NONE', s:kat.pink[1], 'NONE', 'NONE')
+call s:KatHiFun('vimBracket', 'NONE', s:kat.pink[1], 'NONE', 'NONE')
+call s:KatHiFun('vimMapModKey', 'NONE', s:kat.pink[1], 'NONE', 'NONE')
+call s:KatHiFun('vimFuncSID', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
+call s:KatHiFun('vimSetSep', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
+call s:KatHiFun('vimSep', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
+call s:KatHiFun('vimContinue', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
+" }}}
+
+" }}}
+
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
+" s:
