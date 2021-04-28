@@ -265,7 +265,7 @@ call s:KatHiFun('DiffText', s:kat.blue[0], s:kat.bg[0], 'bold', 'NONE')
 
 " indentLine {{{
 if !exists('g:indentLine_color_gui')
-  let g:indentLine_color_gui = s:kat.bg[4]
+  let g:indentLine_color_gui = s:kat.fg[5]
 endif
 " }}}
 
