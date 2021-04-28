@@ -255,7 +255,12 @@ call s:KatHiFun('Error', s:kat.red[0], s:kat.fg[1], 'bold', 'NONE')
 
 call s:KatHiFun('Todo', s:kat.purple[0], s:kat.bg[0], 'NONE', 'NONE')
 
-call s:KatHiFun('Ignore', 'NONE', s:kat.fg[5], 'NONE', 'NONE')
+call s:KatHiFun('Ignore', 'NONE', s:kat.fg[4], 'NONE', 'NONE')
+
+call s:KatHiFun('DiffDelete', s:kat.red[1], s:kat.fg[0], 'bold', 'NONE')
+call s:KatHiFun('DiffAdd', s:kat.green[1], s:kat.bg[0], 'bold', 'NONE')
+call s:KatHiFun('DiffChange', s:kat.purple[1], s:kat.bg[0], 'bold', 'NONE')
+call s:KatHiFun('DiffText', s:kat.blue[0], s:kat.bg[0], 'bold', 'NONE')
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
