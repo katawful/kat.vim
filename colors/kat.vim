@@ -22,7 +22,7 @@ else
 endif
 
 " used to make things easier for filetype changes
-" '<,'>s/hi! link \(\w*\)/call s:KatHiFun('\1', 'NONE', s:kat.word[0], 'NONE', 'NONE',)
+" '<,'>s/hi! link \(\w*\)\sGruvbox\(\w*\)/call s:KatHiFun('\1', 'NONE', s:kat.\2[0], 'NONE', 'NONE',)
 
 " swap and source function
 " noremap <buffer> <leader>s :call SwapNSource()<CR>:source %<CR>
@@ -339,18 +339,21 @@ call s:KatHiFun('markdownOrderedListMarker', 'NONE', s:kat.pink[0], 'bold', 'NON
 call s:KatHiFun('markdownRule', 'NONE', s:kat.red[0], 'NONE', 'NONE',)
 call s:KatHiFun('markdownHeadingRule', 'NONE', s:kat.red[0], 'NONE', 'NONE',)
 
-" call s:KatHiFun('markdownUrlDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxFg3
-" call s:KatHiFun('markdownLinkDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxFg3
-" call s:KatHiFun('markdownLinkTextDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxFg3
+call s:KatHiFun('markdownUrlDelimiter', 'NONE', s:kat.bg[3], 'NONE', 'NONE',)
+call s:KatHiFun('markdownLinkDelimiter', 'NONE', s:kat.bg[3], 'NONE', 'NONE',)
+call s:KatHiFun('markdownLinkTextDelimiter', 'NONE', s:kat.bg[3], 'NONE', 'NONE',)
 
-" call s:KatHiFun('markdownHeadingDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxOrange
-" call s:KatHiFun('markdownUrl', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxPurple
-" call s:KatHiFun('markdownUrlTitleDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGreen
+call s:KatHiFun('markdownHeadingDelimiter', 'NONE', s:kat.orange[0], 'NONE', 'NONE',)
+call s:KatHiFun('markdownUrl', 'NONE', s:kat.purple[0], 'NONE', 'NONE',)
+call s:KatHiFun('markdownUrlTitleDelimiter', 'NONE', s:kat.green[0], 'NONE', 'NONE',)
 
-" call s:KatHiFun('markdownLinkText', 'NONE', s:gray, 'underline', 'NONE')
-" call s:KatHiFun('markdownIdDeclaration', 'NONE', s:kat.word[0], 'NONE', 'NONE',) markdownLinkText
+call s:KatHiFun('markdownLinkText', 'NONE', s:kat.fg[2], 'underline', 'NONE')
+call s:KatHiFun('markdownIdDeclaration', 'NONE', s:kat.fg[2], 'underline', 'NONE',)
 " }}}
+
+
 " }}}
+
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
 " s:
