@@ -21,8 +21,11 @@ else
   echoerr "'g:kat_theme' is invalid, defaulting to 'dark'"
 endif
 
+" used to make things easier for filetype changes
+" '<,'>s/hi! link \(\w*\)/call s:KatHiFun('\1', 'NONE', s:kat.word[0], 'NONE', 'NONE',)
+
 " swap and source function
-" nnoremap <buffer> <leader>s :call SwapNSource()<CR>:source %<CR>
+" noremap <buffer> <leader>s :call SwapNSource()<CR>:source %<CR>
 " map for it
 function! SwapNSource()
   if g:kat_theme ==? 'light'
@@ -257,10 +260,10 @@ call s:KatHiFun('Todo', s:kat.purple[0], s:kat.bg[0], 'NONE', 'NONE')
 
 call s:KatHiFun('Ignore', 'NONE', s:kat.fg[4], 'NONE', 'NONE')
 
-call s:KatHiFun('DiffDelete', s:kat.red[1], s:kat.fg[0], 'bold', 'NONE')
-call s:KatHiFun('DiffAdd', s:kat.green[1], s:kat.bg[0], 'bold', 'NONE')
-call s:KatHiFun('DiffChange', s:kat.purple[1], s:kat.bg[0], 'bold', 'NONE')
-call s:KatHiFun('DiffText', s:kat.blue[0], s:kat.bg[0], 'bold', 'NONE')
+call s:KatHiFun('DiffDelete', s:kat.red[1], 'NONE', 'bold', 'NONE')
+call s:KatHiFun('DiffAdd', s:kat.green[0], 'reverse', 'bold', 'NONE')
+call s:KatHiFun('DiffChange', s:kat.purple[1], 'NONE', 'bold', 'NONE')
+call s:KatHiFun('DiffText', s:kat.blue[0], 'NONE', 'bold', 'NONE')
 " }}}
 
 " indentLine {{{
@@ -281,7 +284,70 @@ call s:KatHiFun('vimSetSep', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
 call s:KatHiFun('vimSep', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
 call s:KatHiFun('vimContinue', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
 " }}}
+" CSS: {{{
+call s:KatHiFun('cssBraces', 'NONE', s:kat.fg[2], 'NONE', 'NONE',)
+call s:KatHiFun('cssFunctionName', 'NONE', s:kat.purple[0], 'bold', 'NONE',)
+call s:KatHiFun('cssIdentifier', 'NONE', s:kat.bg[5], 'NONE', 'NONE',)
+call s:KatHiFun('cssClassName', 'NONE', s:kat.orange[2], 'bold', 'NONE',)
+call s:KatHiFun('cssColor', 'NONE', s:kat.green[0], 'NONE', 'NONE',)
+call s:KatHiFun('cssSelectorOp', 'NONE', s:kat.bg[4], 'NONE', 'NONE',)
+call s:KatHiFun('cssSelectorOp2', 'NONE', s:kat.bg[4], 'NONE', 'NONE',)
+call s:KatHiFun('cssImportant', 'NONE', s:kat.red[0], 'italic', 'NONE',)
+call s:KatHiFun('cssVendor', 'NONE', s:kat.fg[4], 'NONE', 'NONE',)
 
+call s:KatHiFun('cssTextProp', 'NONE', s:kat.green[0], 'bold', 'NONE',)
+call s:KatHiFun('cssAnimationProp', 'NONE', s:kat.purple[1], 'bold', 'NONE',)
+call s:KatHiFun('cssUIProp', 'NONE', s:kat.orange[1], 'bold', 'NONE',)
+call s:KatHiFun('cssTransformProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssTransitionProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssPrintProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssPositioningProp', 'NONE', s:kat.orange[0], 'bold', 'NONE',)
+call s:KatHiFun('cssBoxProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssFontDescriptorProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssFlexibleBoxProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssBorderOutlineProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssBackgroundProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssMarginProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssListProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssTableProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssFontProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssPaddingProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssDimensionProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssRenderProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssColorProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+call s:KatHiFun('cssGeneratedContentProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+" }}}
+" Markdown: {{{
+call s:KatHiFun('markdownItalic', 'NONE', s:kat.fg[3], 'italic', 'NONE')
+
+call s:KatHiFun('markdownH1', 'NONE', s:kat.blue[0], 'bold', 'NONE',)
+call s:KatHiFun('markdownH2', 'NONE', s:kat.blue[1], 'bold', 'NONE',)
+call s:KatHiFun('markdownH3', 'NONE', s:kat.orange[0], 'bold', 'NONE',)
+call s:KatHiFun('markdownH4', 'NONE', s:kat.orange[1], 'bold', 'NONE',)
+call s:KatHiFun('markdownH5', 'NONE', s:kat.pink[0], 'bold', 'NONE',)
+call s:KatHiFun('markdownH6', 'NONE', s:kat.pink[1], 'bold', 'NONE',)
+
+" call s:KatHiFun('markdownCode', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxAqua
+" call s:KatHiFun('markdownCodeBlock', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxAqua
+" call s:KatHiFun('markdownCodeDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxAqua
+
+" call s:KatHiFun('markdownBlockquote', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGray
+" call s:KatHiFun('markdownListMarker', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGray
+" call s:KatHiFun('markdownOrderedListMarker', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGray
+" call s:KatHiFun('markdownRule', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGray
+" call s:KatHiFun('markdownHeadingRule', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGray
+
+" call s:KatHiFun('markdownUrlDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxFg3
+" call s:KatHiFun('markdownLinkDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxFg3
+" call s:KatHiFun('markdownLinkTextDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxFg3
+
+" call s:KatHiFun('markdownHeadingDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxOrange
+" call s:KatHiFun('markdownUrl', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxPurple
+" call s:KatHiFun('markdownUrlTitleDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGreen
+
+" call s:KatHiFun('markdownLinkText', 'NONE', s:gray, 'underline', 'NONE')
+" call s:KatHiFun('markdownIdDeclaration', 'NONE', s:kat.word[0], 'NONE', 'NONE',) markdownLinkText
+" }}}
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
