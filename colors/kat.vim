@@ -272,6 +272,29 @@ if !exists('g:indentLine_color_gui')
 endif
 " }}}
 
+" Coc.nvim {{{
+call s:KatHiFun('CocErrorSign', 'NONE', s:kat.red[0], 'bold', 'NONE',)
+call s:KatHiFun('CocWarningSign', 'NONE', s:kat.orange[0], 'bold', 'NONE',)
+call s:KatHiFun('CocInfoSign', 'NONE', s:kat.orange[1], 'bold', 'NONE',)
+call s:KatHiFun('CocHintSign', 'NONE', s:kat.blue[1], 'bold', 'NONE',)
+call s:KatHiFun('CocErrorFloat', 'NONE', s:kat.red[0], 'NONE', 'NONE',)
+call s:KatHiFun('CocWarningFloat', 'NONE', s:kat.orange[0], 'NONE', 'NONE',)
+call s:KatHiFun('CocInfoFloat', 'NONE', s:kat.orange[1], 'NONE', 'NONE',)
+call s:KatHiFun('CocHintFloat', 'NONE', s:kat.blue[1], 'NONE', 'NONE',)
+call s:KatHiFun('CocDiagnosticsError', 'NONE', s:kat.red[0], 'NONE', 'NONE',)
+call s:KatHiFun('CocDiagnosticsWarning', 'NONE', s:kat.orange[0], 'NONE', 'NONE',)
+call s:KatHiFun('CocDiagnosticsInfo', 'NONE', s:kat.orange[1], 'NONE', 'NONE',)
+call s:KatHiFun('CocDiagnosticsHint', 'NONE', s:kat.blue[0], 'NONE', 'NONE',)
+
+call s:KatHiFun('CocSelectedText', 'NONE', s:kat.red[0], 'NONE', 'NONE',)
+call s:KatHiFun('CocCodeLens', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
+
+call s:KatHiFun('CocErrorHighlight', 'NONE', 'NONE', 'undercurl', s:kat.red[0])
+call s:KatHiFun('CocWarningHighlight', 'NONE', 'NONE', 'undercurl', s:kat.orange[0])
+call s:KatHiFun('CocInfoHighlight', 'NONE', 'NONE', 'undercurl', s:kat.orange[1])
+call s:KatHiFun('CocHintHighlight', 'NONE', 'NONE', 'undercurl', s:kat.blue[1])
+" }}}
+
 " Filetype {{{
 
 " Vim: {{{
@@ -349,6 +372,38 @@ call s:KatHiFun('markdownUrlTitleDelimiter', 'NONE', s:kat.green[0], 'NONE', 'NO
 
 call s:KatHiFun('markdownLinkText', 'NONE', s:kat.fg[2], 'underline', 'NONE')
 call s:KatHiFun('markdownIdDeclaration', 'NONE', s:kat.fg[2], 'underline', 'NONE',)
+" }}}
+" XML: {{{
+call s:KatHiFun('xmlTag', 'NONE', s:kat.red[0], 'bold', 'NONE',)
+call s:KatHiFun('xmlEndTag', 'NONE', s:kat.blue[1], 'NONE', 'NONE',)
+call s:KatHiFun('xmlTagName', 'NONE', s:kat.red[0], 'bold', 'NONE',)
+call s:KatHiFun('xmlEqual', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
+
+call s:KatHiFun('xmlDocTypeDecl', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
+call s:KatHiFun('xmlDocTypeKeyword', 'NONE', s:kat.purple[0], 'NONE', 'NONE',)
+call s:KatHiFun('xmlCdataStart', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
+call s:KatHiFun('xmlCdataCdata', 'NONE', s:kat.purple[0], 'NONE', 'NONE',)
+call s:KatHiFun('dtdFunction', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
+call s:KatHiFun('dtdTagName', 'NONE', s:kat.purple[0], 'NONE', 'NONE',)
+
+call s:KatHiFun('xmlAttrib', 'NONE', s:kat.green[0], 'NONE', 'NONE',)
+call s:KatHiFun('xmlProcessingDelim', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
+call s:KatHiFun('dtdParamEntityPunct', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
+call s:KatHiFun('dtdParamEntityDPunct', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
+call s:KatHiFun('xmlAttribPunct', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
+
+call s:KatHiFun('xmlEntity', 'NONE', s:kat.orange[0], 'bold', 'NONE',)
+call s:KatHiFun('xmlEntityPunct', 'NONE', s:kat.red[0], 'bold', 'NONE',)
+" }}}
+" HTML {{{
+call s:KatHiFun('htmlBold', 'NONE', 'NONE', 'bold', 'NONE')
+call s:KatHiFun('htmlBoldUnderline', 'NONE', 'NONE', 'bold,underline', 'NONE')
+call s:KatHiFun('htmlBoldItalic', 'NONE', 'NONE', 'bold,italic', 'NONE')
+call s:KatHiFun('htmlBoldUnderlineItalic', 'NONE', 'NONE', 'bold,underline,italic', 'NONE')
+
+call s:KatHiFun('htmlUnderline', 'NONE', 'NONE', 'underline', 'NONE')
+call s:KatHiFun('htmlUnderlineItalic', 'NONE', 'NONE', 'underline,italic', 'NONE')
+call s:KatHiFun('htmlItalic', 'NONE', 'NONE', 'italic', 'NONE')
 " }}}
 
 
