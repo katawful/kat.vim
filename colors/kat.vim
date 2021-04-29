@@ -318,7 +318,9 @@ call s:KatHiFun('cssColorProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
 call s:KatHiFun('cssGeneratedContentProp', 'NONE', s:kat.bg[4], 'bold', 'NONE',)
 " }}}
 " Markdown: {{{
-call s:KatHiFun('markdownItalic', 'NONE', s:kat.fg[3], 'italic', 'NONE')
+call s:KatHiFun('markdownItalic', 'NONE', 'NONE', 'italic', 'NONE')
+call s:KatHiFun('markdownBold', 'NONE', 'NONE', 'bold', 'NONE')
+call s:KatHiFun('markdownBoldItalic', 'NONE', 'NONE', 'bold,italic', 'NONE')
 
 call s:KatHiFun('markdownH1', 'NONE', s:kat.blue[0], 'bold', 'NONE',)
 call s:KatHiFun('markdownH2', 'NONE', s:kat.blue[1], 'bold', 'NONE',)
@@ -327,15 +329,15 @@ call s:KatHiFun('markdownH4', 'NONE', s:kat.orange[1], 'bold', 'NONE',)
 call s:KatHiFun('markdownH5', 'NONE', s:kat.pink[0], 'bold', 'NONE',)
 call s:KatHiFun('markdownH6', 'NONE', s:kat.pink[1], 'bold', 'NONE',)
 
-" call s:KatHiFun('markdownCode', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxAqua
-" call s:KatHiFun('markdownCodeBlock', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxAqua
-" call s:KatHiFun('markdownCodeDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxAqua
+call s:KatHiFun('markdownCode', s:kat.bg[1], s:kat.fg[3], 'NONE', 'NONE',)
+call s:KatHiFun('markdownCodeBlock', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
+call s:KatHiFun('markdownCodeDelimiter', 'NONE', s:kat.blue[1], 'NONE', 'NONE',)
 
-" call s:KatHiFun('markdownBlockquote', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGray
-" call s:KatHiFun('markdownListMarker', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGray
-" call s:KatHiFun('markdownOrderedListMarker', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGray
-" call s:KatHiFun('markdownRule', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGray
-" call s:KatHiFun('markdownHeadingRule', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxGray
+call s:KatHiFun('markdownBlockquote', 'NONE', s:kat.bg[2], 'bold', 'NONE',)
+call s:KatHiFun('markdownListMarker', 'NONE', s:kat.pink[0], 'bold', 'NONE',)
+call s:KatHiFun('markdownOrderedListMarker', 'NONE', s:kat.pink[0], 'bold', 'NONE',)
+call s:KatHiFun('markdownRule', 'NONE', s:kat.red[0], 'NONE', 'NONE',)
+call s:KatHiFun('markdownHeadingRule', 'NONE', s:kat.red[0], 'NONE', 'NONE',)
 
 " call s:KatHiFun('markdownUrlDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxFg3
 " call s:KatHiFun('markdownLinkDelimiter', 'NONE', s:kat.word[0], 'NONE', 'NONE',) GruvboxFg3
