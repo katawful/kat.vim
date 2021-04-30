@@ -267,6 +267,18 @@ call s:KatHiFun('DiffChange', s:kat.purple[1], 'NONE', 'bold', 'NONE')
 call s:KatHiFun('DiffText', s:kat.blue[0], 'NONE', 'bold', 'NONE')
 " }}}
 
+" Startify: {{{
+call s:KatHiFun('StartifyBracket', 'NONE', s:kat.bg[3], 'bold', 'NONE',)
+call s:KatHiFun('StartifyFile', 'NONE', s:kat.purple[0], 'NONE', 'NONE',)
+call s:KatHiFun('StartifyNumber', 'NONE', s:kat.blue[0], 'bold', 'NONE',)
+call s:KatHiFun('StartifyPath', 'NONE', s:kat.bg[5], 'NONE', 'NONE',)
+call s:KatHiFun('StartifySlash', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
+call s:KatHiFun('StartifySection', 'NONE', s:kat.red[1], 'bold', 'NONE',)
+call s:KatHiFun('StartifySpecial', 'NONE', s:kat.bg[5], 'NONE', 'NONE',)
+call s:KatHiFun('StartifyHeader', 'NONE', s:kat.pink[0], 'NONE', 'NONE',)
+call s:KatHiFun('StartifyFooter', 'NONE', s:kat.bg[3], 'NONE', 'NONE',)
+" }}}
+
 " indentLine {{{
 if !exists('g:indentLine_color_gui')
   let g:indentLine_color_gui = s:kat.fg[5]
