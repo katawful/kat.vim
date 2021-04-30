@@ -23,6 +23,7 @@ endif
 
 " used to make things easier for filetype changes
 " '<,'>s/hi! link \(\w*\)\sGruvbox\(\w*\)/call s:KatHiFun('\1', 'NONE', s:kat.\2[0], 'NONE', 'NONE',)
+"'<,'>s/hi def link \(\w*\)\s\(\w*\)/call s:KatHiFun('\1', 'NONE', s:kat.\2[0], 'NONE', 'NONE',)
 
 " swap and source function
 " noremap <buffer> <leader>s :call SwapNSource()<CR>:source %<CR>
@@ -307,6 +308,21 @@ call s:KatHiFun('vimSetSep', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
 call s:KatHiFun('vimSep', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
 call s:KatHiFun('vimContinue', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
 " }}}
+" Vimwiki: {{{
+call s:KatHiFun('VimwikiMarkers', 'NONE', s:kat.bg[4], 'NONE', 'NONE',)
+call s:KatHiFun('VimwikiLink', 'NONE', s:kat.orange[0], 'underline,bold', 'NONE',)
+call s:KatHiFun('VimwikiList', 'NONE', s:kat.blue[0], 'bold', 'NONE',)
+call s:KatHiFun('VimwikiCheckBoxDone', 'NONE', s:kat.green[0], 'bold', 'NONE',)
+call s:KatHiFun('VimwikiTag', 'NONE', s:kat.red[0], 'bold', 'NONE',)
+call s:KatHiFun('VimwikiDelText', 'NONE', s:kat.pink[0], 'strikethrough', 'NONE',)
+call s:KatHiFun('VimwikiCode', 'NONE', s:kat.blue[1], 'NONE', 'NONE',)
+call s:KatHiFun('VimwikiHeader1', 'NONE', s:kat.blue[1], 'bold', 'NONE',)
+call s:KatHiFun('VimwikiHeader2', 'NONE', s:kat.blue[0], 'bold', 'NONE',)
+call s:KatHiFun('VimwikiHeader3', 'NONE', s:kat.orange[0], 'bold', 'NONE',)
+call s:KatHiFun('VimwikiHeader4', 'NONE', s:kat.orange[1], 'bold', 'NONE',)
+call s:KatHiFun('VimwikiHeader5', 'NONE', s:kat.pink[0], 'bold', 'NONE',)
+call s:KatHiFun('VimwikiHeader6', 'NONE', s:kat.pink[1], 'bold', 'NONE',)
+" }}}
 " CSS: {{{
 call s:KatHiFun('cssBraces', 'NONE', s:kat.fg[2], 'NONE', 'NONE',)
 call s:KatHiFun('cssFunctionName', 'NONE', s:kat.purple[0], 'bold', 'NONE',)
@@ -345,8 +361,8 @@ call s:KatHiFun('markdownItalic', 'NONE', 'NONE', 'italic', 'NONE')
 call s:KatHiFun('markdownBold', 'NONE', 'NONE', 'bold', 'NONE')
 call s:KatHiFun('markdownBoldItalic', 'NONE', 'NONE', 'bold,italic', 'NONE')
 
-call s:KatHiFun('markdownH1', 'NONE', s:kat.blue[0], 'bold', 'NONE',)
-call s:KatHiFun('markdownH2', 'NONE', s:kat.blue[1], 'bold', 'NONE',)
+call s:KatHiFun('markdownH1', 'NONE', s:kat.blue[1], 'bold', 'NONE',)
+call s:KatHiFun('markdownH2', 'NONE', s:kat.blue[0], 'bold', 'NONE',)
 call s:KatHiFun('markdownH3', 'NONE', s:kat.orange[0], 'bold', 'NONE',)
 call s:KatHiFun('markdownH4', 'NONE', s:kat.orange[1], 'bold', 'NONE',)
 call s:KatHiFun('markdownH5', 'NONE', s:kat.pink[0], 'bold', 'NONE',)
@@ -395,7 +411,7 @@ call s:KatHiFun('xmlAttribPunct', 'NONE', s:kat.fg[3], 'NONE', 'NONE',)
 call s:KatHiFun('xmlEntity', 'NONE', s:kat.orange[0], 'bold', 'NONE',)
 call s:KatHiFun('xmlEntityPunct', 'NONE', s:kat.red[0], 'bold', 'NONE',)
 " }}}
-" HTML {{{
+" HTML: {{{
 call s:KatHiFun('htmlBold', 'NONE', 'NONE', 'bold', 'NONE')
 call s:KatHiFun('htmlBoldUnderline', 'NONE', 'NONE', 'bold,underline', 'NONE')
 call s:KatHiFun('htmlBoldItalic', 'NONE', 'NONE', 'bold,italic', 'NONE')
