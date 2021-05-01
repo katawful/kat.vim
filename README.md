@@ -4,6 +4,14 @@
 A Vim theme with warm blue tones.
 Currently designed for dark mode, light mode is usable but currently has contrast issues
 
+# Installation:
+Install with your plugin manager of choice.
+Example for vim-plug:
+```vim
+" kat.vim
+Plug 'katawful/kat.vim'
+```
+
 # Examples
 ![2021-05-01~12:11:52](https://user-images.githubusercontent.com/45222045/116788285-b8e7e480-aa76-11eb-95c7-59b6845acda2.png)
 ![2021-05-01~12:13:38](https://user-images.githubusercontent.com/45222045/116788301-d3ba5900-aa76-11eb-9269-149bb3bb393c.png)
