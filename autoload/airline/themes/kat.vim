@@ -54,7 +54,7 @@ function! airline#themes#kat#refresh()
 
   let g:airline#themes#kat#palette.accents = { 'red': accents_group }
 
-  let s:TF = airline#themes#get_highlight2(['Normal', 'bg'], ['Delimiter', 'fg'])
+  let s:TF = airline#themes#get_highlight2(['Normal', 'bg'], ['ModeMsg', 'bg'])
   let g:airline#themes#kat#palette.tabline = {
     \ 'airline_tab':  s:N2,
     \ 'airline_tabsel':  s:N1,
