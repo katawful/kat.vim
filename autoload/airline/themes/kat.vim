@@ -4,7 +4,7 @@ function! airline#themes#kat#refresh()
 
   let M0 = airline#themes#get_highlight('Identifier')
   let accents_group = airline#themes#get_highlight('Special')
-  let modified_group = [M0[0], '', M0[2], '', '']
+  let modified_group = [M0[1], '', M0[2], '', '']
   let warning_group = airline#themes#get_highlight2(['Normal', 'bg'], ['Question', 'fg'])
   let error_group = airline#themes#get_highlight2(['Normal', 'bg'], ['WarningMsg', 'fg'])
 
