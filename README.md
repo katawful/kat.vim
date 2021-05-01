@@ -2,7 +2,8 @@
 
 # kat.vim
 A Vim theme with warm blue tones.
-Currently designed for dark mode, light mode is usable but currently has contrast issues
+Currently designed for dark mode, light mode is usable but currently has contrast issues.
+This theme only works with `termguicolors` support.
 
 # Installation:
 Install with your plugin manager of choice.
