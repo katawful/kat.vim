@@ -175,7 +175,7 @@ call s:KatHiFun('PmenuSbar', s:kat.fg[1], s:kat.fg[0], 'NONE', 'NONE')
 call s:KatHiFun('PmenuThumb', s:kat.bg[3], s:kat.bg[0], 'NONE', 'NONE')
 call s:KatHiFun('WildMenu', s:kat.pink[1], s:kat.bg[0], 'NONE', 'NONE')
 
-call s:KatHiFun('Question', 'NONE', s:kat.green[1], 'bold,underline', 'NONE')
+call s:KatHiFun('Question', 'NONE', s:kat.green[1], 'bold,underline', s:kat.green[1])
 call s:KatHiFun('QuickFixLine', s:kat.bg[1], 'NONE', 'NONE', 'NONE')
 
 call s:KatHiFun('Cursor', s:kat.fg[0], s:kat.bg[0], 'NONE', 'NONE')
@@ -251,9 +251,9 @@ call s:KatHiFun('SpecialChar', 'NONE', s:kat.pink[0], 'bold', 'NONE')
 call s:KatHiFun('Tag', 'NONE', s:kat.red[1], 'bold', 'NONE')
 call s:KatHiFun('Delimiter', 'NONE', s:kat.bg[3], 'bold', 'NONE')
 call s:KatHiFun('SpecialComment', 'NONE', s:kat.bg[5], 'bold,italic', 'NONE')
-call s:KatHiFun('Debug', 'NONE', s:kat.fg[3], 'bold,underline', 'NONE')
+call s:KatHiFun('Debug', 'NONE', s:kat.fg[3], 'bold,underline', s:kat.fg[3])
 
-call s:KatHiFun('Underlined', 'NONE', s:kat.bg[5], 'underline', 'NONE')
+call s:KatHiFun('Underlined', 'NONE', s:kat.bg[5], 'underline', s:kat.bg[5])
 
 call s:KatHiFun('Error', s:kat.red[0], s:kat.fg[1], 'bold', 'NONE')
 
@@ -322,7 +322,7 @@ call s:KatHiFun('vimContinue', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
 " }}}
 " Vimwiki: {{{
 call s:KatHiFun('VimwikiMarkers', 'NONE', s:kat.bg[4], 'NONE', 'NONE',)
-call s:KatHiFun('VimwikiLink', 'NONE', s:kat.orange[0], 'underline,bold', 'NONE',)
+call s:KatHiFun('VimwikiLink', 'NONE', s:kat.orange[0], 'underline,bold', s:kat.orange[0],)
 call s:KatHiFun('VimwikiList', 'NONE', s:kat.blue[0], 'bold', 'NONE',)
 call s:KatHiFun('VimwikiCheckBoxDone', 'NONE', s:kat.green[0], 'bold', 'NONE',)
 call s:KatHiFun('VimwikiTag', 'NONE', s:kat.red[0], 'bold', 'NONE',)
@@ -398,8 +398,8 @@ call s:KatHiFun('markdownHeadingDelimiter', 'NONE', s:kat.orange[0], 'NONE', 'NO
 call s:KatHiFun('markdownUrl', 'NONE', s:kat.purple[0], 'NONE', 'NONE',)
 call s:KatHiFun('markdownUrlTitleDelimiter', 'NONE', s:kat.green[0], 'NONE', 'NONE',)
 
-call s:KatHiFun('markdownLinkText', 'NONE', s:kat.fg[2], 'underline', 'NONE')
-call s:KatHiFun('markdownIdDeclaration', 'NONE', s:kat.fg[2], 'underline', 'NONE',)
+call s:KatHiFun('markdownLinkText', 'NONE', s:kat.fg[2], 'underline', s:kat.fg[2])
+call s:KatHiFun('markdownIdDeclaration', 'NONE', s:kat.fg[2], 'underline', s:kat.fg[2],)
 " }}}
 " XML: {{{
 call s:KatHiFun('xmlTag', 'NONE', s:kat.red[0], 'bold', 'NONE',)
