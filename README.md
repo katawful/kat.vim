@@ -37,6 +37,7 @@ This changes the general theme between light and dark
 |[Vimwiki](https://github.com/vimwiki/vimwiki)|
 |[indentLine](https://github.com/Yggdroot/indentLine)|
 |[Airline](https://github.com/vim-airline/vim-airline)|
+|[lightline](https://github.com/itchyny/lightline.vim)|
 
 # Currently supported filetype colorations
 |Filetypes|
