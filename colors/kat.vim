@@ -115,6 +115,25 @@ let s:kat.16[14] = s:kat.blue[1]
 let s:kat.16[15] = s:kat.fg[1]
 " }}}
 
+" :terminal colors {{{
+let g:terminal_color_0 = s:kat.16[0]
+let g:terminal_color_1 = s:kat.16[1]
+let g:terminal_color_2 = s:kat.16[2]
+let g:terminal_color_3 = s:kat.16[3]
+let g:terminal_color_4 = s:kat.16[4]
+let g:terminal_color_5 = s:kat.16[5]
+let g:terminal_color_6 = s:kat.16[6]
+let g:terminal_color_7 = s:kat.16[7]
+let g:terminal_color_8 = s:kat.16[8]
+let g:terminal_color_9 = s:kat.16[9]
+let g:terminal_color_10 = s:kat.16[10]
+let g:terminal_color_11 = s:kat.16[11]
+let g:terminal_color_12 = s:kat.16[12]
+let g:terminal_color_13 = s:kat.16[13]
+let g:terminal_color_14 = s:kat.16[14]
+let g:terminal_color_15 = s:kat.16[15]
+" }}}
+
 " }}}
 
 " highlight function {{{
