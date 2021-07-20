@@ -164,7 +164,7 @@ endfunction
 " Vim groups {{{
 call s:KatHiFun('Normal', s:kat.bg[0], s:kat.fg[0], 'NONE', 'NONE')
 call s:KatHiFun('NormalNC', s:kat.bg[0], s:kat.fg[0], 'NONE', 'NONE')
-call s:KatHiFun('NormalFLoat', s:kat.bg[0], s:kat.fg[0], 'NONE', 'NONE')
+call s:KatHiFun('NormalFloat', s:kat.bg[1], s:kat.fg[0], 'NONE', 'NONE')
 call s:KatHiFun('NonText', s:kat.bg[0], s:kat.fg[3], 'NONE', 'NONE')
 call s:KatHiFun('MatchPattern', s:kat.red[1], s:kat.fg[0], 'NONE', 'NONE')
 call s:KatHiFun('SpecialKey', 'NONE', s:kat.fg[2], 'NONE', 'NONE')
