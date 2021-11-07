@@ -6,8 +6,7 @@ Currently designed for dark mode, light mode is usable but currently has contras
 This theme only works with `termguicolors` support.
 
 # NeoVim Feature Support
-A port to NeoVim's Lua syntax will happen when the necessary Lua constructs are available.
-Until then, you will simply have to make do with how NeoVim maps certain syntax groups by default.
+[NeoVim version](https://github.com/katawful/kat.nvim)
 
 # Installation:
 Install with your plugin manager of choice.
